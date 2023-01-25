@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       // _text_afterconnection = "red";
-      if (connectbtn / 2 == 0) {
+      if (connectbtn % 2 == 0) {
         style = ElevatedButton.styleFrom(
           textStyle: const TextStyle(fontSize: 30),
           backgroundColor: Colors.red,
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             // const Text(
             //   'You have pushed the button this many times:',
@@ -150,6 +150,9 @@ class _MyHomePageState extends State<MyHomePage> {
               style: const TextStyle(
                 fontSize: 18,
               ),
+            ),
+            Container(
+              child: const Text("here comes the photo"),
             ),
             Container(
               transformAlignment: Alignment.bottomCenter,
