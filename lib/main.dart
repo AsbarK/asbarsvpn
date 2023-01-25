@@ -57,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
     textStyle: const TextStyle(fontSize: 20),
     backgroundColor: Colors.blueGrey,
   );
+  int connectbtn = 0;
 
   void _incrementCounter() {
     setState(() {
@@ -66,11 +67,20 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       // _text_afterconnection = "red";
-      style = ElevatedButton.styleFrom(
-        textStyle: const TextStyle(fontSize: 30),
-        backgroundColor: Colors.red,
-      );
-      _textcountry = "Connected";
+      if (connectbtn / 2 == 0) {
+        style = ElevatedButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 30),
+          backgroundColor: Colors.red,
+        );
+        _textcountry = "Connected";
+      } else {
+        style = ElevatedButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 20),
+          backgroundColor: Colors.blueGrey,
+        );
+        _textcountry = "Connect";
+      }
+      connectbtn = connectbtn + 1;
     });
   }
 
