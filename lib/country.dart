@@ -52,6 +52,111 @@ class _countryselState extends State<countrysel>
               ),
             ),
           ),
+          Container(
+            height: 70.0,
+            child: Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Icon(
+                    Icons.flag_outlined,
+                    size: 30.0,
+                  ),
+                  Text(
+                    "India",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      letterSpacing: 3.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 70.0,
+            child: Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Icon(
+                    Icons.flag_outlined,
+                    size: 30.0,
+                  ),
+                  Text(
+                    "India",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      letterSpacing: 3.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 70.0,
+            child: Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Icon(
+                    Icons.flag_outlined,
+                    size: 30.0,
+                  ),
+                  Text(
+                    "India",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      letterSpacing: 3.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 70.0,
+            child: Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Icon(
+                    Icons.flag_outlined,
+                    size: 30.0,
+                  ),
+                  Text(
+                    "India",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      letterSpacing: 3.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 70.0,
+            child: Card(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Icon(
+                    Icons.flag_outlined,
+                    size: 30.0,
+                  ),
+                  Text(
+                    "India",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      letterSpacing: 3.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
         // child: Column(
         //   children: [

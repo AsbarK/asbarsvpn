@@ -15,18 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'My Vpn',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -53,6 +41,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String _text_afterconnection = "Press The Connect Button To Connect To VPN";
   String _textcountry = "Connect";
+  String _selectedCountry = "India";
   ButtonStyle style = ElevatedButton.styleFrom(
     textStyle: const TextStyle(fontSize: 20),
     backgroundColor: Colors.blueGrey,
@@ -83,7 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
       connectbtn = connectbtn + 1;
     });
   }
-
   // _countryButton() {
   //   // setState(() {
   //   return style = ElevatedButton.styleFrom(
@@ -108,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: const Text("Welcome To My VPN"),
+        backgroundColor: const Color.fromRGBO(48, 30, 103, 2),
         actions: [
           IconButton(
             icon: const Icon(Icons.location_city_outlined),
@@ -145,24 +134,74 @@ class _MyHomePageState extends State<MyHomePage> {
             // const Text(
             //   'You have pushed the button this many times:',
             // ),
-            Text(
-              _text_afterconnection,
-              style: const TextStyle(
-                fontSize: 18,
+            // Text(
+            //   _text_afterconnection,
+            //   style: const TextStyle(
+            //     fontSize: 18,
+            //   ),
+            // ),
+            // Container(
+            //   child: const Text("here comes the photo"),
+            // ),
+            // Container(
+            //   transformAlignment: Alignment.bottomCenter,
+            //   child: ElevatedButton(
+            //     onPressed: _incrementCounter,
+            //     // onFocusChange: (value) => (_countryButton()),
+            //     style: style,
+            //     child: Text(_textcountry),
+            //   ),
+            // ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      const Text(
+                        "Status",
+                        style: TextStyle(
+                          color: Color.fromRGBO(91, 143, 185, 1),
+                          fontSize: 24.0,
+                        ),
+                      ),
+                      Text(
+                        _textcountry,
+                        style: const TextStyle(
+                          color: Color.fromRGBO(3, 0, 28, 1),
+                          fontSize: 23.0,
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Text(
+                        "Connected To",
+                        style: TextStyle(
+                          color: Color.fromRGBO(91, 143, 185, 1),
+                          fontSize: 24.0,
+                        ),
+                      ),
+                      Text(
+                        _selectedCountry,
+                        style: const TextStyle(
+                          color: Color.fromRGBO(3, 0, 28, 1),
+                          fontSize: 23.0,
+                        ),
+                      )
+                    ],
+                  )
+                ],
               ),
             ),
-            Container(
-              child: const Text("here comes the photo"),
-            ),
-            Container(
-              transformAlignment: Alignment.bottomCenter,
-              child: ElevatedButton(
-                onPressed: _incrementCounter,
-                // onFocusChange: (value) => (_countryButton()),
-                style: style,
-                child: Text(_textcountry),
-              ),
-            ),
+            Expanded(flex: 4, child: Placeholder()),
+            Expanded(
+              flex: 7,
+              child: countrysel(),
+            )
           ],
         ),
       ),
