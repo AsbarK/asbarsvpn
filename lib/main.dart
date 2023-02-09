@@ -39,15 +39,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _text_afterconnection = "Press The Connect Button To Connect To VPN";
   String _textcountry = "Connect";
   String _selectedCountry = "India";
   ButtonStyle style = ElevatedButton.styleFrom(
     textStyle: const TextStyle(fontSize: 20),
     backgroundColor: const Color.fromRGBO(91, 143, 185, 1),
     elevation: 3.0,
-    shape: CircleBorder(),
-    padding: EdgeInsets.all(24),
+    shape: const CircleBorder(),
+    padding: const EdgeInsets.all(20),
   );
   int connectbtn = 0;
 
@@ -64,8 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
           textStyle: const TextStyle(fontSize: 20),
           backgroundColor: Colors.red,
           elevation: 3.0,
-          shape: CircleBorder(),
-          padding: EdgeInsets.all(24),
+          shape: const CircleBorder(),
+          padding: const EdgeInsets.all(24),
           shadowColor: Colors.black,
           // visualDensity: VisualDensity(horizontal: 20.0, vertical: 2.0)
         );
@@ -75,8 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
           textStyle: const TextStyle(fontSize: 20),
           backgroundColor: Colors.blueGrey,
           elevation: 3.0,
-          shape: CircleBorder(),
-          padding: EdgeInsets.all(24),
+          shape: const CircleBorder(),
+          padding: const EdgeInsets.all(20),
         );
         _textcountry = "Connect";
       }
