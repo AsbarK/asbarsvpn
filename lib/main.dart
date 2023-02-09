@@ -44,7 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
   String _selectedCountry = "India";
   ButtonStyle style = ElevatedButton.styleFrom(
     textStyle: const TextStyle(fontSize: 20),
-    backgroundColor: Colors.blueGrey,
+    backgroundColor: const Color.fromRGBO(91, 143, 185, 1),
+    elevation: 3.0,
+    shape: CircleBorder(),
+    padding: EdgeInsets.all(24),
   );
   int connectbtn = 0;
 
@@ -58,14 +61,20 @@ class _MyHomePageState extends State<MyHomePage> {
       // _text_afterconnection = "red";
       if (connectbtn % 2 == 0) {
         style = ElevatedButton.styleFrom(
-          textStyle: const TextStyle(fontSize: 30),
+          textStyle: const TextStyle(fontSize: 20),
           backgroundColor: Colors.red,
+          elevation: 3.0,
+          shape: CircleBorder(),
+          padding: EdgeInsets.all(24),
         );
         _textcountry = "Connected";
       } else {
         style = ElevatedButton.styleFrom(
           textStyle: const TextStyle(fontSize: 20),
           backgroundColor: Colors.blueGrey,
+          elevation: 3.0,
+          shape: CircleBorder(),
+          padding: EdgeInsets.all(24),
         );
         _textcountry = "Connect";
       }
@@ -92,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(182, 234, 218, 1),
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
@@ -197,7 +207,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            Expanded(flex: 4, child: Placeholder()),
+            Container(
+              width: 250,
+              height: 250,
+              child: SizedBox(
+                  width: 250.0,
+                  child: ElevatedButton(
+                    onPressed: _incrementCounter,
+                    child: Text(_textcountry),
+                    style: style,
+                  )),
+              // child: InkWell(
+              //   borderRadius: BorderRadius.circular(100),
+              //   onTap: _incrementCounter,
+              //   child: Container(
+
+              //     color: const Color.fromRGBO(91, 143, 185, 1),
+              //     width: 300,
+              //     alignment: Alignment.center,
+              //     child: Text(_textcountry),
+              //   ),
+              // ),
+            ),
             Expanded(
               flex: 7,
               child: countrysel(),
