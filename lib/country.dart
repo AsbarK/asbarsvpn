@@ -36,10 +36,20 @@ class _countryselState extends State<countrysel>
             height: 90.0,
             child: Row(
               children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      borderOnForeground: true,
+                      surfaceTintColor: Colors.amber,
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -49,7 +59,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "India(Mumbai)",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
@@ -67,8 +77,58 @@ class _countryselState extends State<countrysel>
             height: 90.0,
             child: Row(
               children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
+                    height: 80.0,
+                    child: Card(
+                      elevation: 8.0,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Icon(
+                            Icons.flag_outlined,
+                            size: 30.0,
+                          ),
+                          Text(
+                            "USA",
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              letterSpacing: 3.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 90.0,
+            child: Row(
+              children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
                       elevation: 8.0,
@@ -80,7 +140,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "UK",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
@@ -98,8 +158,16 @@ class _countryselState extends State<countrysel>
             height: 90.0,
             child: Row(
               children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
                       elevation: 8.0,
@@ -111,7 +179,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "India(Delhi)",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
@@ -129,39 +197,16 @@ class _countryselState extends State<countrysel>
             height: 90.0,
             child: Row(
               children: [
-                Expanded(
-                  child: Container(
-                    height: 80.0,
-                    child: Card(
-                      elevation: 8.0,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
-                          Icon(
-                            Icons.flag_outlined,
-                            size: 30.0,
-                          ),
-                          Text(
-                            "India",
-                            style: TextStyle(
-                              fontSize: 30.0,
-                              letterSpacing: 3.0,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
                   ),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 90.0,
-            child: Row(
-              children: [
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
                       elevation: 8.0,
@@ -173,7 +218,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "Netherland",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
@@ -191,8 +236,16 @@ class _countryselState extends State<countrysel>
             height: 80.0,
             child: Row(
               children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
                       elevation: 8.0,
@@ -204,7 +257,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "Japan",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
@@ -222,8 +275,16 @@ class _countryselState extends State<countrysel>
             height: 90.0,
             child: Row(
               children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
                       elevation: 8.0,
@@ -235,7 +296,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "Singapoor",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
@@ -253,8 +314,16 @@ class _countryselState extends State<countrysel>
             height: 90.0,
             child: Row(
               children: [
+                Radio(
+                  value: "country",
+                  groupValue: "country",
+                  onChanged: (value) {},
+                  fillColor: MaterialStateColor.resolveWith(
+                    (states) => Colors.deepPurple,
+                  ),
+                ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 80.0,
                     child: Card(
                       elevation: 8.0,
@@ -266,7 +335,7 @@ class _countryselState extends State<countrysel>
                             size: 30.0,
                           ),
                           Text(
-                            "India",
+                            "India(Hydrabad)",
                             style: TextStyle(
                               fontSize: 30.0,
                               letterSpacing: 3.0,
