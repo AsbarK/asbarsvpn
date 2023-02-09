@@ -66,6 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 3.0,
           shape: CircleBorder(),
           padding: EdgeInsets.all(24),
+          shadowColor: Colors.black,
+          // visualDensity: VisualDensity(horizontal: 20.0, vertical: 2.0)
         );
         _textcountry = "Connected";
       } else {
