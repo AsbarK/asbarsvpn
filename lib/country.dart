@@ -7,6 +7,11 @@ class countrysel extends StatefulWidget {
   State<countrysel> createState() => _countryselState();
 }
 
+BorderSide style = const BorderSide(
+  color: Colors.deepPurple,
+);
+int country = 1;
+
 class _countryselState extends State<countrysel>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
@@ -38,8 +43,13 @@ class _countryselState extends State<countrysel>
               children: [
                 Radio(
                   value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  groupValue: country,
+                  onChanged: (value) {
+                    setState(() {
+                      style = const BorderSide(color: Colors.greenAccent);
+                      country = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -48,8 +58,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
-                      borderOnForeground: true,
-                      surfaceTintColor: Colors.amber,
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -89,6 +101,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -122,7 +138,9 @@ class _countryselState extends State<countrysel>
                 Radio(
                   value: "country",
                   groupValue: "country",
-                  onChanged: (value) {},
+                  onChanged: (value) {
+                    setState(() {});
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -131,6 +149,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -170,6 +192,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -209,6 +235,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -248,6 +278,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -287,7 +321,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
-                      elevation: 8.0,
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
@@ -326,6 +363,10 @@ class _countryselState extends State<countrysel>
                   child: SizedBox(
                     height: 80.0,
                     child: Card(
+                      shape: RoundedRectangleBorder(
+                        side: style,
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
                       elevation: 8.0,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
