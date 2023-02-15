@@ -10,7 +10,10 @@ class countrysel extends StatefulWidget {
 BorderSide style = const BorderSide(
   color: Colors.deepPurple,
 );
-int country = 1;
+
+enum country { india1, india2, india3, netherland, usa, uk, japan, singapoor }
+
+country? _selectedCountry = country.india1;
 
 class _countryselState extends State<countrysel>
     with SingleTickerProviderStateMixin {
@@ -31,9 +34,16 @@ class _countryselState extends State<countrysel>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(182, 234, 218, 1),
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(48, 30, 103, 2),
         title: const Text("Select the country"),
+        elevation: 2.0,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+            side: BorderSide(
+              color: Colors.deepPurple,
+            )),
       ),
       body: ListView(
         children: [
@@ -42,12 +52,12 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: country,
+                  value: country.india1,
+                  groupValue: _selectedCountry,
                   onChanged: (value) {
                     setState(() {
-                      style = const BorderSide(color: Colors.greenAccent);
-                      country = value;
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
                     });
                   },
                   fillColor: MaterialStateColor.resolveWith(
@@ -90,9 +100,14 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  value: country.usa,
+                  groupValue: _selectedCountry,
+                  onChanged: (value) {
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -136,10 +151,13 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
+                  value: country.uk,
+                  groupValue: _selectedCountry,
                   onChanged: (value) {
-                    setState(() {});
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
                   },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
@@ -181,9 +199,14 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  value: country.india2,
+                  groupValue: _selectedCountry,
+                  onChanged: (value) {
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -224,9 +247,14 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  value: country.netherland,
+                  groupValue: _selectedCountry,
+                  onChanged: (value) {
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -267,9 +295,14 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  value: country.japan,
+                  groupValue: _selectedCountry,
+                  onChanged: (value) {
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -310,9 +343,14 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  value: country.singapoor,
+                  groupValue: _selectedCountry,
+                  onChanged: (value) {
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
@@ -352,9 +390,14 @@ class _countryselState extends State<countrysel>
             child: Row(
               children: [
                 Radio(
-                  value: "country",
-                  groupValue: "country",
-                  onChanged: (value) {},
+                  value: country.india3,
+                  groupValue: _selectedCountry,
+                  onChanged: (value) {
+                    setState(() {
+                      // style = const BorderSide(color: Colors.greenAccent);
+                      _selectedCountry = value;
+                    });
+                  },
                   fillColor: MaterialStateColor.resolveWith(
                     (states) => Colors.deepPurple,
                   ),
